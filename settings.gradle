@@ -1,0 +1,2 @@
+include ':app', ':library_core'
+rootProject.name='project_core_lock'
