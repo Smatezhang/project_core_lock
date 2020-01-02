@@ -8,6 +8,8 @@ import io.reactivex.functions.Function;
 import io.reactivex.functions.Predicate;
 
 public class Permission {
+
+
     public final String name;
     public final boolean granted;
     public final boolean shouldShowRequestPermissionRationale;
@@ -50,9 +52,6 @@ public class Permission {
         return result;
     }
 
-    public String toString() {
-        return "Permission{name='" + this.name + '\'' + ", granted=" + this.granted + ", shouldShowRequestPermissionRationale=" + this.shouldShowRequestPermissionRationale + '}';
-    }
 
     private String combineName(List<Permission> permissions) {
         return ((StringBuilder) Observable.fromIterable(permissions).map(new Function<Permission, String>() {
