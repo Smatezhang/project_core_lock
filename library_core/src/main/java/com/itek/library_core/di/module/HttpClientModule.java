@@ -5,7 +5,6 @@ import android.content.Context;
 import com.google.gson.Gson;
 import com.itek.library_core.api.RequestInterceptor;
 import com.itek.library_core.api.converter.GsonConverterFactory;
-import com.itek.library_core.util.LiveDataCallAdapterFactory;
 import com.itek.library_core.util.cookie.CookieJarImpl;
 import com.itek.library_core.util.cookie.PersistentCookieStore;
 
@@ -44,7 +43,6 @@ public class HttpClientModule {
         return builder
                 .baseUrl(httpUrl)
                 .client(client)
-                .addCallAdapterFactory(new LiveDataCallAdapterFactory())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }

@@ -10,34 +10,39 @@ import java.io.Serializable;
  * Description：
  */
 
-public class BaseResponse <T> implements Serializable {
 
-    private T data;
 
-    private String result;
+public class BaseResponse<T> {
+
     private String infos;
+    private String result;
+    private T data;
 
     public T getData() {
         return data;
     }
 
-    public void setData(T data) {
-        this.data = data;
+    public void setData(T result) {
+        this.data = result;
     }
 
-    public String getErrorCode() {
-        return result;
+    public boolean isOk() {
+        return "1".equals(result);
     }
-
-    public void setErrorCode(String errorCode) {
-        this.result = errorCode;
-    }
-
-    public String getErrorMsg() {
+    public String getMessage() {
         return infos;
     }
 
-    public void setErrorMsg(String errorMsg) {
-        this.infos = errorMsg;
+    public void setMessage(String message) {
+        this.infos = message;
     }
+
+    public void setResult(String result) {
+        this.result = result;
+    }
+
+    public String getResult() {
+        return result;
+    }
+
 }

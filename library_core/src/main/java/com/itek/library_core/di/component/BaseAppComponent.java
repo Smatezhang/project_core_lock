@@ -2,7 +2,6 @@ package com.itek.library_core.di.component;
 
 import com.google.gson.Gson;
 import com.itek.library_core.BaseApplication;
-import com.itek.library_core.db.CacheDatabase;
 import com.itek.library_core.di.module.AppModule;
 import com.itek.library_core.di.module.CacheModule;
 import com.itek.library_core.di.module.GlobalConfigModule;
@@ -30,7 +29,7 @@ import okhttp3.OkHttpClient;
         HttpClientModule.class,
         GlobalConfigModule.class,
 //        ServiceModule.class,
-        CacheModule.class,
+//        CacheModule.class,
 })
 public interface BaseAppComponent {
 
@@ -46,7 +45,7 @@ public interface BaseAppComponent {
 
     void inject(BaseApplication application);
 
-    CacheDatabase cacheDatabase();
+//    CacheDatabase cacheDatabase();
 
 
 }

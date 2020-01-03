@@ -200,6 +200,7 @@ public abstract class BaseApplication extends MultiDexApplication implements Has
                         return request;
                     }
                 })
+
                 .build();
     }
 
@@ -212,9 +213,9 @@ public abstract class BaseApplication extends MultiDexApplication implements Has
 //        return new ServiceModule();
 //    }
 
-    protected CacheModule getCacheModule() {
-        return new CacheModule(this);
-    }
+//    protected CacheModule getCacheModule() {
+//        return new CacheModule(this);
+//    }
 
 
     @Override

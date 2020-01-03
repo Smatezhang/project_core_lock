@@ -2,7 +2,6 @@ package com.itek.library_core.di.module;
 
 
 import com.itek.library_core.BaseApplication;
-import com.itek.library_core.db.CacheDatabase;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -22,12 +21,12 @@ import dagger.Provides;
 @Module
 public class CacheModule {
 
-    @Inject
-    public CacheModule(BaseApplication application){}
-
-    @Provides
-    @Singleton
-    CacheDatabase provideCacheDatabase(BaseApplication application) {
-        return Room.databaseBuilder(application, CacheDatabase.class, "Cache.db").build();
-    }
+//    @Inject
+//    public CacheModule(BaseApplication application){}
+//
+//    @Provides
+//    @Singleton
+//    CacheDatabase provideCacheDatabase(BaseApplication application) {
+//        return Room.databaseBuilder(application, CacheDatabase.class, "Cache.db").build();
+//    }
 }
