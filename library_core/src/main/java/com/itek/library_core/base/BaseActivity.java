@@ -98,6 +98,10 @@ public abstract class BaseActivity<VM extends BaseViewModel, VB extends ViewData
         mBinding.setVariable(viewModelId, mViewModel);
 
         getLifecycle().addObserver(mViewModel);
+
+        //注入RxLifecycle生命周期
+        mViewModel.injectLifecycleProvider(this);
+
     }
 
 
