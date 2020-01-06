@@ -89,6 +89,6 @@ dependencies {
 //    api project(':library_common')
 //    api project(':library-res')
     implementation 'com.github.Smatezhang:Project_library_res_lock:v1.0.0'
-    implementation 'com.github.Smatezhang:Project_library_common:1.0.0'
+    implementation 'com.github.Smatezhang:Project_library_common:1.0.1'
 
 }
